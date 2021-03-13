@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if cname == cname %}
+<h3 class="title">
+  Welcome, {{cname}} </h3>
+{% else %}
+<h5>Sorry, you are not logged in..</h5>
+{% endif %}
+<h1>ChoreList</h1>
+<p>Here you can view the your chores in a list</p>
+{% for post in posts %}
+        <a href="#">
+            <h2>{{ post['chores'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ post['finished'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock content %}

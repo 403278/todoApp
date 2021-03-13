@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Chores</h1>
+<p>Here you can update and add more chores to the choreList</p>
+<form action="{{ url_for('chore')}}" method="POST">
+          <div>
+                <label for="chores"> Chores: </label>
+                <input type="text" name="chores">
+          </div>
+          <div>
+                <label for="finished"> Finished: </label>
+                <input type="text" name="finished">
+          </div>
+          <div>
+              <input type="submit" value="Update/Add">
+          </div>
+      </form> 
+    
+{% endblock content %}

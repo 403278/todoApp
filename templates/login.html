@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <h2>
+            Login Page
+        </h2>
+      </div>
+      <form action="{{ url_for('login')}}" method="POST">
+          <div>
+                <label for="cname"> Clientname: </label>
+                <input type="text" name='cname'>
+          </div>
+          <div>
+                <label for="password"> Password: </label>
+                <input type="password" name="password">
+          </div>
+          <div>
+              <input type="submit" value="Login">
+          </div>
+      </form>
+    </div>
+  </article>
+{% endblock content %}
