@@ -15,7 +15,7 @@ import sqlite3
 # from appDB import db
 
 app = Flask(__name__)
-app.secret_key = 'Th!s-!s-$ecret'
+# app.secret_key = 'Th!s-!s-$ecret'
 # Material(app)
 
 def get_db_connection():
@@ -139,4 +139,4 @@ def logout():
     return redirect(url_for('login'))        
 
 if __name__ == '__main__':
-    app.run(host="18.184.217.98",port=80)
+    app.run(debug=True)
