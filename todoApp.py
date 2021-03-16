@@ -15,7 +15,7 @@ import sqlite3
 # from appDB import db
 
 app = Flask(__name__)
-# app.secret_key = 'Th!s-!s-$ecret'
+app.secret_key = 'Th!s-!s-$ecret'
 # Material(app)
 
 def get_db_connection():
